@@ -1,0 +1,24 @@
+[user]
+	name = Jaydeep Solanki
+	email = jaydp17@gmail.com
+[alias]
+	co = checkout
+	s = status
+	last = log -1 HEAD
+	b = branch
+	d = diff
+	dc = diff --cached
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+[commit]
+	gpgsign = true
+[fetch]
+	prune = true
+[core]
+	ignorecase = false
+[gpg]
+	program = gpg
+[push]
+	# https://git-scm.com/docs/git-config#git-config-pushdefault
+	default = simple
