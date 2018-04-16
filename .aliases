@@ -1,0 +1,60 @@
+
+# ------------------------------------
+# Docker alias and function
+# ------------------------------------
+
+# Get container process
+alias dps="docker ps"
+
+# Get process included stop container
+alias dpa="docker ps -a"
+
+# Get images
+alias di="docker images"
+
+# Docker machine
+alias dm="docker-machine"
+
+# build a container with tag
+dbuild() { docker build -t $1 --rm=true .; }
+
+# ssh into a running container
+dssh() { docker exec -it $1 bash; }
+
+# Remove all images with <none> tag
+drmi() { docker rmi $(docker images | grep '^<none>' | awk '{print $3}'); }
+
+# Stop all containers
+dstop() { docker stop $(docker ps -a -q); }
+
+# Remove all stopped containers
+drm() { docker rm $(docker ps -q -f status=exited); }
+
+# Show all alias related docker
+dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
+
+# ------------------------------------
+# Rest of the stuff
+# ------------------------------------
+
+# git status
+alias gits='git s'
+
+# make dir and cd into it
+take () { mkdir "$1" && cd "$1"; }
+
+# youtube-dl playlist download
+youtube-dl-playlist() { youtube-dl --output '%(autonumber)s-%(title)s.%(ext)s' --autonumber-size 2 $1; }
+
+# terraform
+alias tf="terraform"
+
+# tar it up
+alias tarItUp="tar -czvf"
+
+alias watch="watch "
+
+# kubernetes
+alias k="kubectl"
+alias knodes="kubectl get nodes | grep node"
+alias kmaster="kubectl get nodes | grep master"
