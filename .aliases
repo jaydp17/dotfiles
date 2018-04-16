@@ -58,3 +58,6 @@ alias watch="watch "
 alias k="kubectl"
 alias knodes="kubectl get nodes | grep node"
 alias kmaster="kubectl get nodes | grep master"
+
+# killport
+killport() { pid=$(lsof -i:$1 -t); kill -TERM $pid || kill -KILL $pid; }
