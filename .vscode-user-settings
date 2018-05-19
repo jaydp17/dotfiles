@@ -30,5 +30,6 @@
     "suppressNoRepositoryWarning": false,
     "suppressResultsExplorerNotice": false,
     "suppressShowKeyBindingsNotice": true
-  }
+  },
+  "terminal.integrated.shell.osx": "zsh"
 }
