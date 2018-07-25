@@ -4,7 +4,6 @@
   "editor.tabSize": 2,
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": false,
-  "window.zoomLevel": 0,
   "workbench.iconTheme": "vscode-icons",
   "eslint.enable": false,
   "tslint.enable": false,
@@ -31,5 +30,18 @@
     "suppressResultsExplorerNotice": false,
     "suppressShowKeyBindingsNotice": true
   },
-  "terminal.integrated.shell.osx": "zsh"
+  "gitlens.historyExplorer.enabled": true,
+  "terminal.integrated.shell.osx": "zsh",
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "zenMode.centerLayout": false,
+  "emmet.includeLanguages": {
+    "html": "html",
+    "erb": "erb",
+    "javascript": "javascriptreact",
+    "vue": "html",
+    "ejs": "html"
+  }
 }
+
